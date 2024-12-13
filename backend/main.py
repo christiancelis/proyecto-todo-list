@@ -5,6 +5,7 @@ from models.Task import Task
 from db.configdb import get_db_session
 from typing import Optional
 from fastapi.middleware.cors import CORSMiddleware
+from db.configdb import Base,engine
 
 
 class Tarea(BaseModel):
@@ -24,6 +25,12 @@ class uTarea(BaseModel):
     nombre: Optional[str] = None
     descripcion: Optional[str] = None
     estado: Optional[str] = None
+    
+try:
+    Base.metadata.create_all(bind=engine)
+    print("Tablas creadas exitosamente.")
+except Exception as e:
+    print(f"Error al crear las tablas: {e}")
 
 
 app = FastAPI()

@@ -31,6 +31,11 @@ butonform.addEventListener("click", async (e) => {
 
 
 function pintarTareas(b) {
+  if(b===undefined){
+    console.log("no hay tareas para mostrar");
+    return
+  }
+
   const contenedorTareas = document.getElementById("taskcontainer");
   let html = "";
   for (let i = 0; i < b.length; i++) {

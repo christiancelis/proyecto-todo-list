@@ -62,8 +62,6 @@ crear un entorno virtual phyton, Situarse dentro del directorio backend, e ir a 
 ```
 
 ## Configuracion de la base de datos:
-
-Crea un base de datos en workbench con el nombre:  phytondb
     
 1. Configurar ruta de acceso a bd en el backend:
 
